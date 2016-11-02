@@ -17,6 +17,8 @@ router.get('/', function (req, res, next) {
 	var currentDate = new Date();
 	currentDate.getTime();
 	var surveyEnd = Date.parse(config.surveyEnd);
+	console.log("Trenutni datum: ",currentDate);
+	console.log("Koncni datum: ", surveyEnd);
 	
 	if (currentDate > surveyEnd) {
 		res.render('index', { isOver: true });
