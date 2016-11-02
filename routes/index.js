@@ -15,8 +15,9 @@ var connection = mysql.createConnection({
 /* GET home page. */
 router.get('/', function (req, res, next) {
 	var currentDate = new Date();
+	var surveyEnd = new Date();
 	currentDate.getTime();
-	var surveyEnd = Date.parse(config.surveyEnd);
+	surveyEnd = Date.parse(config.surveyEnd);
 	console.log("Trenutni datum: ",currentDate);
 	console.log("Koncni datum: ", surveyEnd);
 	
