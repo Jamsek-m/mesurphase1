@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>ME Preffered suggestions Survey - Phase I.</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<style>
+		.white{
+			color:white;
+		}
+		.centered {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+
+	</style>
+
+
+	<body style="padding:25px;background-color:black">
+		<img class="centered" style="padding-top:25px" src="./images/banner.png"/> 
+		<h2 class="white" style="padding-top:25px;text-align:center">Unofficial 4th preffered suggestion survey for Medieval Europe, November 2016: Phase I.</h2>
+		<% if(!isOver){ %>
+			<form action="/submit" method="post" enctype="multipart/form-data" style="width:500px;padding-top:50px" class="centered">
+				<div class="form-group">
+					<label class="white" for="Name">Character name:</label>
+					<input type="text" class="form-control" id="Char_name" name="Char_name" />
+				</div>
+				<div class="form-group">
+					<label class="white" for="Sug_name">Name of suggestion:</label>
+					<input type="text" class="form-control" id="Sug_name" name="Sug_name" />
+				</div>
+				<div class="form-group">
+					<label class="white" for="Sug_link">Link to suggestion:</label>
+					<input type="text" class="form-control" id="Sug_link" name="Sug_link" />
+				</div>
+				<div class="form-group">
+					<label class="white" for="Sug_goal">Goal of suggestion:</label>
+					<input type="text" class="form-control" id="Sug_goal" name="Sug_goal" />
+				</div>
+				<div class="form-group">
+					<label class="white" for="Sug_desc">Short description:</label>
+					 <textarea class="form-control" rows="5" id="Sug_desc" name="Sug_desc"></textarea>
+				</div>
+				<button type="submit" class="btn btn-default centered">Submit</button>
+			</form>
+
+
+			<% } else { %>
+			<div>Survey has ended. You can no longer submit your answers.</div>
+
+
+
+			<% } %>
+	</body>
+</html>

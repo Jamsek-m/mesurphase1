@@ -1,0 +1,2 @@
+C:\Users\miha_\Documents\Visual Studio 2015\Projects\ExpressProject\ME Survey\first_phase\obj\Debug\FirstPhase.njsprojResolveAssemblyReference.cache
+C:\Users\miha_\Documents\Visual Studio 2015\Projects\ExpressProject\ME Survey\first_phase\bin\Microsoft.NodejsTools.WebRole.dll
