@@ -1,3 +1,6 @@
 ﻿{
-	"surveyEnd" :  "November 10, 2016"
+	"phaseIstart": "November 1, 2016 18:00",
+	"phaseIend": "November 10, 2016 23:59",
+	"phaseIIstart": "November 11, 2016 00:01",
+	"phaseIIend" : "November 17, 2016 23:59"
 }
