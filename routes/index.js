@@ -53,11 +53,11 @@ router.post('/submit', function (req, res, next) {
 	form.parse(req, function (err, polja) {
 		if (err) throw err;
 		
-		var char_name = polja.Char_name;
-		var sug_name = polja.Sug_name;
-		var link = polja.Sug_link;
-		var desc = polja.Sug_desc;
-		var goal = polja.Sug_goal;
+		var char_name = makeStringSafe(polja.Char_name);
+		var sug_name = makeStringSafe(polja.Sug_name);
+		var link = makeStringSafe(polja.Sug_link);
+		var desc = makeStringSafe(polja.Sug_desc);
+		var goal = makeStringSafe(polja.Sug_goal);
 		//apply str = str.replace(/'/g, "\'");
 		var sql = "INSERT INTO phase_one(CHAR_NAME, SUG_NAME, SUG_LINK, SUG_GOALS, SUG_DESC) VALUES ('" +
 				char_name + "','" +
@@ -84,8 +84,8 @@ router.post('/glasuj', function (req, res, next) {
 	var form = formidable.IncomingForm();
 	form.parse(req, function (err, polja){
 		if (err) throw err;
-		var ime = polja.Char_name;
-		var vote = polja.radijo;
+		var ime = makeStringSafe(polja.Char_name);
+		var vote = makeStringSafe(polja.radijo);
 		//apply str = str.replace(/'/g, "\'");
 		var sql = "INSERT INTO phase_two(CHAR_NAME, VOTED) VALUES ('" +
 		ime + "' , " +
