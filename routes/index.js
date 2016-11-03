@@ -58,7 +58,7 @@ router.post('/submit', function (req, res, next) {
 		var link = polja.Sug_link;
 		var desc = polja.Sug_desc;
 		var goal = polja.Sug_goal;
-
+		//apply str = str.replace(/'/g, "\'");
 		var sql = "INSERT INTO phase_one(CHAR_NAME, SUG_NAME, SUG_LINK, SUG_GOALS, SUG_DESC) VALUES ('" +
 				char_name + "','" +
 				sug_name + "','" +
@@ -86,6 +86,7 @@ router.post('/glasuj', function (req, res, next) {
 		if (err) throw err;
 		var ime = polja.Char_name;
 		var vote = polja.radijo;
+		//apply str = str.replace(/'/g, "\'");
 		var sql = "INSERT INTO phase_two(CHAR_NAME, VOTED) VALUES ('" +
 		ime + "' , " +
 		vote + ")";
@@ -96,5 +97,11 @@ router.post('/glasuj', function (req, res, next) {
 	
 });
 
+function makeStringSafe(str){
+	str = str.replace(/'/g, "\'");
+	str = str.replace(/"/g, "\"");
+	str = str.replace(/\\/g, "\\");
+	return str;
+}
 
 module.exports = router;
