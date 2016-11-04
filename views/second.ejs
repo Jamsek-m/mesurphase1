@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 		<title>ME Preffered suggestions Survey - Phase II.</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
 	</head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -33,7 +33,7 @@
 	<form action ="/glasuj" method="post" enctype="multipart/form-data" style="width:500px;padding-top:50px" class="centered">
 		<div class="form-group" style="padding-bottom:25px">
 			<label class="white" for="Name">Character name:</label>
-			<input type="text" class="form-control" id="Char_name" name="Char_name" />
+			<input type="text" class="form-control" id="Char_name" name="Char_name" required/>
 		</div>
 		<label class="white">Choose suggestion you wish to vote for:</label>
 		<% for(var i = 0; i < items.length; i++){ %>

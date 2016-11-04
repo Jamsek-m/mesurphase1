@@ -19,23 +19,23 @@
 			<form action="/submit" method="post" enctype="multipart/form-data" style="width:500px;padding-top:50px" class="centered">
 				<div class="form-group">
 					<label class="white" for="Name">Character name:</label>
-					<input type="text" class="form-control" id="Char_name" name="Char_name" />
+					<input type="text" class="form-control" id="Char_name" name="Char_name" required/>
 				</div>
 				<div class="form-group">
 					<label class="white" for="Sug_name">Name of suggestion:</label>
-					<input type="text" class="form-control" id="Sug_name" name="Sug_name" />
+					<input type="text" class="form-control" id="Sug_name" name="Sug_name" required/>
 				</div>
 				<div class="form-group">
 					<label class="white" for="Sug_link">Link to suggestion:</label>
-					<input type="text" class="form-control" id="Sug_link" name="Sug_link" />
+					<input type="text" class="form-control" id="Sug_link" name="Sug_link"/>
 				</div>
 				<div class="form-group">
 					<label class="white" for="Sug_goal">Goal of suggestion:</label>
-					<input type="text" class="form-control" id="Sug_goal" name="Sug_goal" />
+					<input type="text" class="form-control" id="Sug_goal" name="Sug_goal" required/>
 				</div>
 				<div class="form-group">
 					<label class="white" for="Sug_desc">Short description:</label>
-					 <textarea class="form-control" rows="5" id="Sug_desc" name="Sug_desc"></textarea>
+					 <textarea class="form-control" rows="5" id="Sug_desc" name="Sug_desc" required></textarea>
 				</div>
 				<button type="submit" class="btn btn-default centered">Submit</button>
 			</form>

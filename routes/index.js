@@ -72,7 +72,7 @@ router.post('/glasuj', function (req, res, next) {
 	form.parse(req, function (err, polja) {
 		if (err) throw err;
 		var ime = makeStringSafe(polja.Char_name);
-		var vote = makeStringSafe(polja.radijo);
+		var vote = polja.radijo;
 		var sql = "INSERT INTO phase_two(CHAR_NAME, VOTED) VALUES ('" +
 		ime + "' , " +
 		vote + ")";
@@ -83,9 +83,9 @@ router.post('/glasuj', function (req, res, next) {
 });
 
 function makeStringSafe(str){
-	str = str.replace(/'/g, "\'");
-	str = str.replace(/"/g, "\"");
-	str = str.replace(/\\/g, "\\");
+	str = str.replace(/'/g, "''");
+	str = str.replace(/"/g, " ");
+	str = str.replace(/\\/g, " ");
 	return str;
 }
 
